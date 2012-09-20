@@ -1,4 +1,4 @@
-require "wamp-client/version"
+require "wamp/client/version"
 
 module Wamp
   module Client
