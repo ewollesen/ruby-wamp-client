@@ -1,5 +1,5 @@
-module Wamp
-  module Client
+module WAMP
+  class Client
     VERSION = "0.0.1"
   end
 end

@@ -13,7 +13,12 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "wamp-client"
   gem.require_paths = ["lib"]
-  gem.version       = Wamp::Client::VERSION
+  gem.version       = WAMP::Client::VERSION
 
   gem.add_development_dependency("rake")
+  gem.add_development_dependency("pry")
+  gem.add_development_dependency("debugger")
+
+  gem.add_dependency("json")
+  gem.add_dependency("net-ws")
 end
