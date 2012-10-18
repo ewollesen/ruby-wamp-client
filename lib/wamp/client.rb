@@ -18,7 +18,7 @@ module WAMP
 
 
     def initialize(uri, options=nil)
-      options ||= {}
+      options ||= {:subprotocols => ["wamp"]}
       @session_id = nil
       @ws = Net::WS.new(uri, options)
       @subscriptions = {}
