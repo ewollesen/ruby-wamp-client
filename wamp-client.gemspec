@@ -20,5 +20,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency("debugger")
 
   gem.add_dependency("json")
-  gem.add_dependency("net-ws")
+  gem.add_dependency("net-ws", "~> 0.0.2")
 end
