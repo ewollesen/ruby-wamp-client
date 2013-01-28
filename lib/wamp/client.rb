@@ -1,6 +1,7 @@
+# -*- coding: utf-8 -*-
 require "wamp/client/version"
 require "net/ws"
-require "json"
+require "yajl/json_gem"
 require "timeout"
 
 
@@ -70,7 +71,7 @@ module WAMP
 
     def publish(uri_or_curie, data)
       payload = [TYPEID_PUBLISH, uri_or_curie, data]
-      @ws.send_text(JSON.dump(payload))
+      @ws.send_text(JSON.dump(payload).force_encoding("utf-8"))
     end
 
 

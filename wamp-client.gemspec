@@ -15,10 +15,14 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = WAMP::Client::VERSION
 
+  gem.add_dependency("yajl-ruby")
+  gem.add_dependency("net-ws", "~> 0.0.3")
+
+  gem.add_development_dependency("debugger")
   gem.add_development_dependency("rake")
   gem.add_development_dependency("pry")
-  gem.add_development_dependency("debugger")
+  gem.add_development_dependency("minitest")
+  gem.add_development_dependency("minitest-spec")
+  gem.add_development_dependency("minitest-rg")
 
-  gem.add_dependency("json")
-  gem.add_dependency("net-ws", "~> 0.0.2")
 end
