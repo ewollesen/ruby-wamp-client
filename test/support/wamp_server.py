@@ -1,3 +1,5 @@
+#!/usr/bin/env python2.7 -u -Wall
+
 import sys
 
 from twisted.internet import reactor
@@ -18,7 +20,7 @@ class RpcServerProtocol(WampServerProtocol):
 
 if __name__ == '__main__':
    factory = WampServerFactory("ws://localhost:9001", debug=True)
-   factory.protocol = RpcServerProtocol
+   factory.protocol = WampServerProtocol
    log.startLogging(sys.stdout)
    listenWS(factory)
    print "Here we go"
