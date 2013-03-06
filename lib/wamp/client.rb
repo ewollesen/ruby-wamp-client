@@ -18,8 +18,8 @@ module WAMP
     TYPEID_EVENT = 8
 
 
-    def initialize(uri, options=nil)
-      options ||= {:subprotocols => ["wamp"]}
+    def initialize(uri, options={})
+      options = {:subprotocols => ["wamp"]}.merge(options)
       @session_id = nil
       @ws = Net::WS.new(uri, options)
       @subscriptions = {}
