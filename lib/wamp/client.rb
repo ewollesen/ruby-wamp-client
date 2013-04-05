@@ -30,6 +30,10 @@ module WAMP
       receive_welcome_message
     end
 
+    def connected?
+      @ws.connected?
+    end
+
     def close
       @ws.close
     end
